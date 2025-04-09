@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Laurent
+N:Pilot;Laurent;;;
+ORG:IA pour tous
+TITLE:Expert en Intelligence Artificielle
+TEL;TYPE=WORK,VOICE:+33782451590
+TEL;TYPE=CELL,VOICE:+353860723258
+EMAIL;TYPE=PREF,INTERNET:laurent@iapourtous.pro
+URL:https://laurent-ia.netlify.app
+END:VCARD
