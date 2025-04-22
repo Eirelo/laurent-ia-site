@@ -17,8 +17,48 @@
 </head>
 <body class="bg-gray-100 text-gray-900 font-sans scroll-smooth">
 
-  <!-- Google Translate Widget -->
-  <div id="google_translate_element" style="position: fixed; top: 10px; right: 10px; z-index: 1000;"></div>
+  <!-- Google Translate Styled Button -->
+  <style>
+    .translate-container {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 1000;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 4px 8px;
+      font-size: 14px;
+      font-family: sans-serif;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .goog-te-banner-frame.skiptranslate,
+    .goog-logo-link,
+    .goog-te-gadget span {
+      display: none !important;
+    }
+
+    body {
+      top: 0px !important;
+    }
+
+    .goog-te-gadget {
+      color: transparent;
+    }
+
+    .goog-te-gadget .goog-te-combo {
+      color: #111 !important;
+      font-size: 14px;
+      font-weight: 500;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+    }
+  </style>
+  <div class="translate-container">
+    🌐 <span id="google_translate_element"></span>
+  </div>
   <script type="text/javascript">
   function googleTranslateElementInit() {
     new google.translate.TranslateElement({
