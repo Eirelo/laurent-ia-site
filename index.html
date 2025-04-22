@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <script>
+    (function() {
+      var userLang = navigator.language || navigator.userLanguage;
+      if (userLang && userLang.substring(0,2) !== 'fr') {
+        window.location.href = '/en';
+      }
+    })();
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Laurent – Expert en IA</title>
@@ -14,70 +22,8 @@
     gtag('config', 'G-DV5RWMQJHH');
   </script>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <style>
-    .translate-container {
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      z-index: 1000;
-      background: white;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      padding: 6px 10px;
-      font-size: 15px;
-      font-family: sans-serif;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-
-    .goog-te-banner-frame,
-    .goog-te-balloon-frame,
-    .goog-logo-link,
-    .goog-te-gadget span,
-    .goog-te-gadget .goog-te-menu-value,
-    .VIpgJd-ZVi9od-xl07Ob,
-    .VIpgJd-ZVi9od-xl07Ob-lTBxed,
-    .VIpgJd-ZVi9od-ORHb-OEVmcd {
-      display: none !important;
-    }
-
-    .goog-te-gadget {
-      font-size: 0 !important;
-      color: transparent !important;
-    }
-
-    .goog-te-combo {
-      font-size: 16px !important;
-      font-weight: 500;
-      padding: 6px 10px;
-      border: none;
-      background: transparent;
-      cursor: pointer;
-      color: #111 !important;
-      display: block !important;
-    }
-
-    body {
-      top: 0 !important;
-    }
-  </style>
 </head>
 <body class="bg-gray-100 text-gray-900 font-sans scroll-smooth">
-
-  <!-- Google Translate propre -->
-  <div class="translate-container">
-    🌐 <span id="google_translate_element"></span>
-  </div>
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'fr',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-        autoDisplay: false
-      }, 'google_translate_element');
-    }
-  </script>
-  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
   <section class="min-h-screen flex flex-col justify-center items-center text-center p-6">
     <img src="laurent-pilot-bbdaa419.jpg" alt="Laurent" class="rounded-full w-36 h-36 mb-6 shadow-lg" />
     <h1 class="text-4xl font-bold mb-4">Laurent – Expert en Intelligence Artificielle</h1>
