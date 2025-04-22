@@ -29,23 +29,24 @@
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
-    .goog-te-banner-frame.skiptranslate,
+    .goog-te-banner-frame,
+    .goog-te-balloon-frame,
+    .goog-te-gadget-icon,
     .goog-logo-link,
     .goog-te-gadget span,
-    .goog-te-gadget .goog-te-menu-value {
+    .goog-te-gadget .goog-te-menu-value,
+    .VIpgJd-ZVi9od-xl07Ob-lTBxed,
+    .VIpgJd-ZVi9od-ORHb-OEVmcd {
       display: none !important;
-    }
-
-    body {
-      top: 0px !important;
     }
 
     .goog-te-gadget {
       color: transparent;
+      font-size: 0;
     }
 
     .goog-te-combo {
-      font-size: 15px !important;
+      font-size: 16px !important;
       font-weight: 500;
       padding: 6px 10px;
       border: none;
@@ -53,11 +54,15 @@
       cursor: pointer;
       color: #111 !important;
     }
+
+    body {
+      top: 0px !important;
+    }
   </style>
 </head>
 <body class="bg-gray-100 text-gray-900 font-sans scroll-smooth">
 
-  <!-- Google Translate uniquement -->
+  <!-- Google Translate (propre et sans logo) -->
   <div class="translate-container">
     🌐 <span id="google_translate_element"></span>
   </div>
