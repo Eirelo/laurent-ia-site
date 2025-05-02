@@ -3,85 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Laurent – AI Expert</title>
+  <title>Laurent - AI Advisor</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f4f4f8;
+      background: #f5f5f5;
       margin: 0;
       padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      color: #333;
     }
-    .container {
-      max-width: 800px;
-      padding: 40px 20px;
+    header {
+      background: #7f00ff;
+      color: white;
+      padding: 2rem;
       text-align: center;
     }
-    h1 {
-      color: #4B0082;
-    }
-    .profile-img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      margin-bottom: 20px;
-    }
-    .button {
-      background-color: #4B0082;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      margin: 10px 0;
-      border-radius: 6px;
-      font-size: 16px;
-      cursor: pointer;
-      width: 100%;
-      max-width: 300px;
-    }
-    .button:hover {
-      background-color: #360061;
-    }
-    .astuce-box {
+    main {
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 1rem;
       background: white;
-      padding: 20px;
-      margin-top: 40px;
-      border-radius: 12px;
+      border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
     }
-    .footer-links a {
-      margin: 0 10px;
-      color: #4B0082;
+    a.button {
+      display: inline-block;
+      margin: 1rem 0.5rem;
+      padding: 1rem 2rem;
+      background: #7f00ff;
+      color: white;
       text-decoration: none;
+      border-radius: 8px;
+      font-size: 1.2rem;
+    }
+    a.button:hover {
+      background: #5e00b3;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+      margin: 2rem 0;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img class="profile-img" src="laurent-pilot-bbdaa419.jpg" alt="Laurent" />
-    <h1>Laurent – AI Expert</h1>
-    <p>I make AI accessible to everyone: conferences, training sessions, and strategic support for businesses. Over 10 years of experience to support your digital transformation.</p>
-
-    <ul style="text-align: left; display: inline-block; margin-top: 20px;">
-      <li>✅ Awareness of AI risks (bias, ethics, cybersecurity)</li>
-      <li>✅ Guidance on AI integration</li>
-      <li>✅ Hands-on workshops and talks for all levels</li>
-    </ul>
-
-    <a class="button" href="tel:+33782451590">Appeler France</a>
-    <a class="button" href="tel:+353860723258">Appeler Irlande</a>
-    <a class="button" href="mailto:laurent@iapourtous.pro">Email</a>
-    <a class="button" href="laurent-pilot.vcf" download>Ajouter à mes contacts</a>
-    <a class="button" href="https://www.linkedin.com/in/laurentpilot" target="_blank">LinkedIn</a>
-    <a class="button" href="https://www.facebook.com/iapourtous" target="_blank">Facebook</a>
-
-    <div class="astuce-box">
-      <h2>🧐 Astuce IA du jour</h2>
-      <p><strong>FR :</strong> Tu peux utiliser l’IA pour résumer automatiquement tes emails avant de les lire. Utilise par exemple un outil comme ChatGPT ou n8n avec Hugging Face pour gagner du temps chaque matin.</p>
-      <p><strong>EN :</strong> You can use AI to automatically summarize your emails before reading them. Use a tool like ChatGPT or n8n with Hugging Face to save time every morning.</p>
-    </div>
-  </div>
+  <header>
+    <h1>Laurent</h1>
+    <p>AI Advisor | Trainer | Public Speaker</p>
+  </header>
+  <main>
+    <h2>Connect with me</h2>
+    <a class="button" href="tel:+33782451590">📞 FR Call</a>
+    <a class="button" href="tel:+353860723258">📞 IE Call</a>
+    <a class="button" href="mailto:laurent@iapourtous.pro">✉️ Email</a>
+    <a class="button" href="/vcard.vcf">💾 Save Contact</a>
+    <a class="button" href="https://www.linkedin.com/in/laurentpeltier">🔗 LinkedIn</a>
+    <a class="button" href="https://www.facebook.com/profile.php?id=61573622889264">📘 Facebook</a>
+  </main>
+  <footer>
+    <p>Website powered by Netlify · Maintained by Laurent</p>
+  </footer>
 </body>
 </html>
