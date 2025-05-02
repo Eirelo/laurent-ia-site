@@ -13,19 +13,6 @@
       color: #333;
       text-align: center;
     }
-    header {
-      background: #5f00ba;
-      color: white;
-      padding: 20px 0;
-    }
-    h1 {
-      margin: 0;
-      font-size: 2.2rem;
-    }
-    p.subtitle {
-      margin: 5px 0 15px;
-      font-size: 1rem;
-    }
     .container {
       background: white;
       margin: 30px auto;
@@ -34,6 +21,22 @@
       width: 90%;
       max-width: 500px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    img.photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+    h1 {
+      color: #5f00ba;
+      font-size: 1.8rem;
+      margin: 0;
+    }
+    p.subtitle {
+      font-size: 1rem;
+      margin: 5px 0 20px;
     }
     .btn {
       background: #5f00ba;
@@ -49,6 +52,22 @@
     .btn:hover {
       background: #4a0096;
     }
+    .tip-box {
+      background: #fff;
+      border-radius: 10px;
+      margin: 30px auto;
+      padding: 20px;
+      max-width: 600px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: left;
+    }
+    .tip-box h2 {
+      text-align: center;
+      color: #5f00ba;
+    }
+    .tip-box p {
+      margin: 10px 0;
+    }
     footer {
       margin-top: 20px;
       font-size: 0.9rem;
@@ -57,17 +76,10 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1>Laurent – AI Expert</h1>
-    <p class="subtitle">I make AI accessible to everyone: conferences, training sessions, and strategic support for businesses. Over 10 years of experience to support your digital transformation.</p>
-  </header>
-
   <div class="container">
-    <p style="margin-bottom: 30px;">
-      ✅ Awareness of AI risks (bias, ethics, cybersecurity)<br>
-      ✅ Guidance on AI integration<br>
-      ✅ Hands-on workshops and talks for all levels
-    </p>
+    <img src="laurent-pilot-bbdaa419.jpg" alt="Laurent" class="photo" />
+    <h1>Laurent – AI Expert</h1>
+    <p class="subtitle">AI Advisor | Trainer | Public Speaker</p>
 
     <a href="tel:+33782451590" class="btn">📞 FR Call</a>
     <a href="tel:+353860723258" class="btn">📞 IE Call</a>
@@ -76,6 +88,12 @@
     <a href="laurent-pilot.vcf" class="btn">💾 Save Contact</a>
     <a href="https://www.linkedin.com/in/laurentpilet/" class="btn">🔗 LinkedIn</a>
     <a href="https://www.facebook.com/profile.php?id=61573622889264" class="btn">📘 Facebook</a>
+  </div>
+
+  <div class="tip-box">
+    <h2>🧠 Astuce IA du jour</h2>
+    <p><strong>FR :</strong> Tu peux utiliser l'IA pour résumer automatiquement tes emails avant de les lire. Utilise par exemple un outil comme ChatGPT ou n8n avec Hugging Face pour gagner du temps chaque matin.</p>
+    <p><strong>EN :</strong> You can use AI to automatically summarize your emails before reading them. Use a tool like ChatGPT or n8n with Hugging Face to save time every morning.</p>
   </div>
 
   <footer>
