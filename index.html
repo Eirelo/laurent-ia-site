@@ -33,37 +33,23 @@
       text-align: center;
       margin-top: 0;
     }
-    .button-columns {
+    .button-row {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       margin-top: 30px;
       flex-wrap: wrap;
-    }
-    .column {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      flex: 1;
-      padding: 10px;
-      min-width: 150px;
-    }
-    .center-column {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      flex: 1;
-      padding: 10px;
-      min-width: 150px;
+      gap: 15px;
     }
     .btn-link {
       background: none;
       border: none;
-      margin: 4px;
-      padding: 0;
+      margin: 0 8px;
+      padding: 8px 12px;
       font-size: 14px;
       color: #333;
       text-decoration: none;
+      display: inline-block;
     }
     .btn-link img.social {
       width: 24px;
@@ -92,7 +78,6 @@
       ✅ Guidance on AI integration<br>
       ✅ Hands-on workshops and talks for all levels
     </div>
-
     <div class="tips-box">
       <div style="text-align: center;">
         <h2>💡 Astuce IA</h2>
@@ -103,30 +88,21 @@
       <p><strong>🇬🇧</strong> Use an artificial intelligence algorithm to plan your meals based on your dietary preferences and nutritional goals.</p>
       <!-- ASTUCE_END -->
     </div>
-
-    <div class="button-columns">
-      <div class="column">
+    <div class="button-row">
         <a href="mailto:laurent@iapourtous.pro" class="btn-link">✉️ Email</a>
         <a href="laurent-pilot.vcf" class="btn-link">💾 Save Contact</a>
-      </div>
-      <div class="center-column">
         <a href="tel:+353860723258" class="btn-link">🇮🇪 +353 86 072 32 58</a>
         <a href="tel:+33782451590" class="btn-link">🇫🇷 +33 7 82 45 15 90</a>
-      </div>
-      <div class="column">
         <a href="https://www.linkedin.com/in/laurentpilot/" class="btn-link">
           <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="social" />
         </a>
         <a href="https://www.facebook.com/profile.php?id=61573622889264" class="btn-link">
           <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook" class="social" />
         </a>
-      </div>
     </div>
-
     <footer>
       Website powered by Netlify · Maintained by Laurent
     </footer>
   </div>
 </body>
 </html>
-
