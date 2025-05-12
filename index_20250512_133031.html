@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laurent – AI Expert</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fdf6e3;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .clock {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 12px;
+            font-size: 16px;
+        }
+        .profile img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+        }
+        .section {
+            margin-top: 30px;
+        }
+        .tips {
+            background-color: #d8f3dc;
+            display: inline-block;
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 30px;
+            text-align: left;
+        }
+        .contacts {
+            margin-top: 30px;
+        }
+        .contacts div {
+            display: inline-block;
+            margin: 0 15px;
+        }
+        .social-icons {
+            margin-top: 20px;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="clock" id="clock"></div>
+
+    <div class="profile section">
+        <img src="laurent.jpg" alt="Laurent">
+        <h1>Laurent – AI Expert</h1>
+        <p>I make AI accessible to everyone through conferences, workshops, and strategic support.</p>
+        <p>With over 10 years of experience, I help businesses integrate AI responsibly and efficiently.</p>
+        <p>
+            ✅ Awareness of AI risks (bias, ethics, cybersecurity)<br>
+            ✅ Guidance on AI integration<br>
+            ✅ Hands-on workshops and talks for all levels
+        </p>
+    </div>
+
+    <div class="tips">
+        <h2>💡 Astuce IA</h2>
+        <h3>IA du jour / AI Tip of the Day</h3>
+        <p>🇫🇷 Utiliser un algorithme d'intelligence artificielle pour planifier vos repas en fonction de vos préférences alimentaires et de vos objectifs nutritionnels.</p>
+        <p>🇬🇧 Use an artificial intelligence algorithm to plan your meals based on your dietary preferences and nutritional goals.</p>
+    </div>
+
+    <div class="contacts">
+        <div>📧 Email</div>
+        <div>💾 Save Contact</div>
+        <div>🇮🇪 +353 86 072 32 58</div>
+        <div>🇫🇷 +33 7 82 45 15 90</div>
+    </div>
+
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/" target="_blank">🔗</a>
+        <a href="https://www.facebook.com/profile.php?id=61573622889264" target="_blank">📘</a>
+    </div>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            const date = now.toLocaleDateString('en-GB');
+            document.getElementById('clock').innerHTML = `${hours}:${minutes}:${seconds}<br>${date}`;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+</html>
