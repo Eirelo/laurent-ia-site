@@ -3,25 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laurent pour vous servir – Expert en IA / AI Expert (Corrected Clock v12)</title>
+    <title>Laurent – Expert en IA / AI Expert (Corrected Clock v9)</title>
     <style>
       body { font-family: sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; text-align: center; }
       .container { max-width: 800px; margin: 20px auto; background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+      img[alt="Laurent"] { border-radius: 60px !important; margin-bottom:15px; } /* Increased margin-bottom */
       
       .main-title-laurent {
-        font-size: 1.8em; /* Reduced font size */
+        font-size: 2.2em; 
         font-weight: bold;
-        margin-top: 15px; 
-        margin-bottom: 15px; 
+        margin-top: 10px; /* Added margin-top */
+        margin-bottom: 5px; /* Increased margin-bottom */
         line-height: 1.1;
       }
-      img[alt="Laurent"] { display: block; margin-left: auto; margin-right: auto; border-radius: 60px !important; margin-bottom:10px; } 
-      
       .main-title-expert {
         font-size: 1.5em; 
         color: #555;
-        margin-top: 25px; /* Increased margin-top */
-        margin-bottom: 40px; /* Significantly increased margin-bottom */
+        margin-top:0px;
+        margin-bottom: 30px; /* Significantly increased margin-bottom for more space before columns */
         line-height: 1.1;
       }
 
@@ -34,17 +33,9 @@
       }
       .presentation-grid .column h3 {
           margin-top:0;
-          margin-bottom: 10px; /* Adjusted for new h4 */
+          margin-bottom: 15px; /* Increased margin-bottom for space after Présentation/Presentation */
           font-size: 1.1em;
           color: #333;
-      }
-      .presentation-grid .column h4 {
-          font-size: 1.0em;
-          font-weight: bold;
-          color: #333;
-          margin-top: 20px; /* Space before this new title */
-          margin-bottom: 10px; /* Space after this new title */
-          text-align: center;
       }
       .presentation-grid .column p, .presentation-grid .column ul {
         line-height: 1.6;
@@ -86,10 +77,14 @@
         flex-grow: 1; 
         text-align: center; 
       }
-      .titles-block-v4 h2 {
-          font-size: 1.3em; 
-          font-weight: bold;
-          margin:0;
+      .titles-block-v4 h2, .titles-block-v4 h3 {
+        margin: 0;
+      }
+      .titles-block-v4 h2 { font-size: 1.5em; }
+      .titles-block-v4 h3 {
+        font-size: 1.1em;
+        color: #555;
+        margin-top: 4px;
       }
       .clock-spacer-v4 {
         min-width: 65px; 
@@ -112,9 +107,9 @@
 </head>
 <body>
   <div class="container">
-    <h1 class="main-title-laurent">Laurent pour vous servir</h1>
-    <img src="laurent-pilot-bbdaa419.jpg" alt="Laurent" width="120">
+    <img src="laurent-pilot-bbdaa419.jpg" alt="Laurent" width="120" style="border-radius: 60px;">
     
+    <h1 class="main-title-laurent">Laurent</h1>
     <h2 class="main-title-expert">Expert en IA / AI Expert</h2>
 
     <div class="presentation-grid">
@@ -122,7 +117,6 @@
             <h3>Présentation</h3>
             <p>Je rends l_IA accessible à tous à travers des conférences, des ateliers et un accompagnement stratégique.</p>
             <p>Avec plus de 10 ans d_expérience, j_aide les entreprises à intégrer l_IA de manière responsable et efficace.</p>
-            <h4>Expert en IA</h4> 
             <h3>Points Clés</h3>
             <ul>
                 <li>✅ Sensibilisation aux risques de l_IA (biais, éthique, cybersécurité)</li>
@@ -134,7 +128,6 @@
             <h3>Presentation</h3>
             <p>I make AI accessible to everyone through conferences, workshops, and strategic support.</p>
             <p>With over 10 years of experience, I help businesses integrate AI responsibly and efficiently.</p>
-            <h4>AI Expert</h4>
             <h3>Key Points</h3>
             <ul>
                 <li>✅ Awareness of AI risks (bias, ethics, cybersecurity)</li>
@@ -150,7 +143,8 @@
           <!-- L_horloge sera mise à jour par JavaScript -->
         </div>
         <div class="titles-block-v4">
-          <h2>💡 IA du jour / AI Tip of the Day</h2>
+          <h2>💡 Astuce IA</h2>
+          <h3>IA du jour / AI Tip of the Day</h3>
         </div>
         <div class="clock-spacer-v4"></div> <!-- Espaceur invisible pour équilibrer -->
       </div>
@@ -186,3 +180,4 @@
   </div>
 </body>
 </html>
+
