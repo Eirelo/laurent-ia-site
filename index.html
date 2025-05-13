@@ -1,67 +1,98 @@
+cat > index.html <<'EOF'
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Laurent – AI Expert</title>
-  <style>
-    body { font-family: Arial, sans-serif; background-color: #fdf6e3; color: #000; margin: 0; padding: 20px; text-align: center; }
-    .container { max-width: 700px; margin: 0 auto; }
-    .presentation { margin-top: 10px; line-height: 1.6; }
-    .tips-box { background: #d8f3dc; border-radius: 10px; padding: 15px; margin-top: 30px; text-align: left; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-    .tips-box h2, .tips-box h3 { text-align: center; margin-top: 0; }
-    .button-row { display: flex; justify-content: center; align-items: center; margin-top: 30px; flex-wrap: wrap; gap: 15px; }
-    .btn-link { background: none; border: none; margin: 0 8px; padding: 8px 12px; font-size: 14px; color: #333; text-decoration: none; display: inline-block; }
-    .btn-link img.social { width: 24px; height: 24px; margin: 5px; }
-    footer { margin-top: 40px; font-size: 12px; color: #777; }
-    #realtime-clock { position: fixed; top: 20px; left: 20px; background: rgba(0, 0, 0, 0.7); color: #ffffff; padding: 10px 20px; border-radius: 12px; font-family: 'Arial', sans-serif; font-size: 1.2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center; z-index: 1000; opacity: 0; animation: fadeIn 1s forwards; }
-    #realtime-clock small { font-size: 0.8rem; color: #cccccc; }
-    @keyframes fadeIn { to { opacity: 1; } }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laurent – AI Expert (Corrected Clock)</title>
+    <style>
+      body { font-family: sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; text-align: center; }
+      .container { max-width: 800px; margin: 20px auto; background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+      img[alt="Laurent"] { border-radius: 60px !important; }
+      .presentation { line-height: 1.6; }
+      .tips-box {
+        background-color: #e6ffe6; /* Vert clair pour la boîte d'astuces */
+        border: 1px solid #cce5cc;
+        padding: 15px;
+        margin-top: 20px;
+        border-radius: 5px;
+        text-align: left;
+        position: relative; /* Contexte de positionnement pour l'horloge */
+        padding-top: 70px; /* Espace pour l'horloge en haut */
+      }
+      .tips-box h2, .tips-box h3 { text-align: center; }
+      .button-row { margin-top: 20px; }
+      .btn-link { margin: 5px; text-decoration: none; color: #007bff; }
+      .social { width: 24px; height: 24px; vertical-align: middle; }
+      footer { margin-top: 30px; font-size: 0.9em; color: #777; }
+
+      /* Styles pour l'horloge */
+      #realtime-clock {
+        position: absolute;
+        top: 10px; /* Position en haut à gauche dans .tips-box */
+        left: 10px;
+        background-color: #333; /* Fond sombre original */
+        color: white; /* Texte blanc original */
+        padding: 10px;
+        border-radius: 5px;
+        font-family: sans-serif;
+        z-index: 10; /* Au-dessus du contenu de .tips-box */
+        text-align: left; /* Alignement du texte de l'horloge */
+      }
+      #realtime-clock strong { font-size: 1.2em; }
+      #realtime-clock small { font-size: 0.9em; }
+    </style>
 </head>
 <body>
-<div id="realtime-clock"></div>
-<script>
-  function updateClock() {
-    const now = new Date();
-    const hours = String(now.getHours()).padStart(2, '0');
-    const minutes = String(now.getMinutes()).padStart(2, '0');
-    const seconds = String(now.getSeconds()).padStart(2, '0');
-    const day = String(now.getDate()).padStart(2, '0');
-    const month = String(now.getMonth() + 1).padStart(2, '0');
-    const year = now.getFullYear();
-    document.getElementById('realtime-clock').innerHTML = `<strong>${hours}:${minutes}:${seconds}</strong><br><small>${day}/${month}/${year}</small>`;
-  }
-  setInterval(updateClock, 1000);
-  updateClock();
-</script>
-<div class="container">
-  <img src="laurent-pilot-bbdaa419.jpg" alt="Laurent" width="120" style="border-radius: 60px;" />
-  <h1>Laurent – AI Expert</h1>
-  <p class="presentation">I make AI accessible to everyone through conferences,<br>workshops, and strategic support.<br><br>With over 10 years of experience, I help businesses<br>integrate AI responsibly and efficiently.</p>
-  <div style="text-align: left; padding-left: 20px; margin: 0 auto; max-width: 400px;">
-    ✅ Awareness of AI risks (bias, ethics, cybersecurity)<br>
-    ✅ Guidance on AI integration<br>
-    ✅ Hands-on workshops and talks for all levels
-  </div>
-  <div class="tips-box">
-    <div style="text-align: center;">
-      <h2>💡 Astuce IA</h2>
-      <h3>IA du jour / AI Tip of the Day</h3>
+  <div class="container">
+    <img src="laurent-pilot-bbdaa419.jpg" alt="Laurent" width="120" style="border-radius: 60px;">
+    <h1>Laurent – AI Expert</h1>
+    <p class="presentation">I make AI accessible to everyone through conferences,<br>workshops, and strategic support.<br><br>With over 10 years of experience, I help businesses<br>integrate AI responsibly and efficiently.</p>
+    <div style="text-align: left; padding-left: 20px; margin: 0 auto; max-width: 400px;">
+      ✅ Awareness of AI risks (bias, ethics, cybersecurity)<br>
+      ✅ Guidance on AI integration<br>
+      ✅ Hands-on workshops and talks for all levels
     </div>
-    <p><strong>🇫🇷</strong> Utiliser un algorithme d'intelligence artificielle pour planifier vos repas en fonction de vos préférences alimentaires et de vos objectifs nutritionnels.</p>
-    <p><strong>🇬🇧</strong> Use an artificial intelligence algorithm to plan your meals based on your dietary preferences and nutritional goals.</p>
+    <div class="tips-box">
+      <div id="realtime-clock">
+        <!-- L'horloge sera mise à jour par JavaScript -->
+      </div>
+      <script>
+        function updateClock() {
+          const now = new Date();
+          const hours = String(now.getHours()).padStart(2, '0');
+          const minutes = String(now.getMinutes()).padStart(2, '0');
+          const seconds = String(now.getSeconds()).padStart(2, '0');
+          const day = String(now.getDate()).padStart(2, '0');
+          const month = String(now.getMonth() + 1).padStart(2, '0'); // Les mois sont de 0 à 11
+          const year = now.getFullYear();
+          const clockElement = document.getElementById('realtime-clock');
+          if (clockElement) {
+            clockElement.innerHTML = `<strong>${hours}:${minutes}:${seconds}</strong><br><small>${day}/${month}/${year}</small>`;
+          }
+        }
+        // Mettre à jour l'horloge toutes les secondes et immédiatement au chargement
+        setInterval(updateClock, 1000);
+        updateClock();
+      </script>
+      <!-- Contenu original de la tips-box -->
+      <div style="text-align: center;">
+        <h2>💡 Astuce IA</h2>
+        <h3>IA du jour / AI Tip of the Day</h3>
+      </div>
+      <p><strong>🇫🇷</strong> Utiliser un algorithme d'intelligence artificielle pour planifier vos repas en fonction de vos préférences alimentaires et de vos objectifs nutritionnels.</p>
+      <p><strong>🇬🇧</strong> Use an artificial intelligence algorithm to plan your meals based on your dietary preferences and nutritional goals.</p>
+    </div>
+    <div class="button-row">
+      <a href="mailto:laurent@iapourtous.pro" class="btn-link">✉️ Email</a>
+      <a href="laurent-pilot.vcf" class="btn-link">💾 Save Contact</a>
+      <a href="tel:+353860723258" class="btn-link">🇮🇪 +353 86 072 32 58</a>
+      <a href="tel:+33782451590" class="btn-link">🇫🇷 +33 7 82 45 15 90</a>
+      <a href="https://www.linkedin.com/in/laurentpilot/" class="btn-link"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="social"></a>
+      <a href="https://www.facebook.com/profile.php?id=61573622889264" class="btn-link"><img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook" class="social"></a>
+    </div>
+    <footer>Website powered by Netlify · Maintained by Laurent</footer>
   </div>
-  <div class="button-row">
-    <a href="mailto:laurent@iapourtous.pro" class="btn-link">✉️ Email</a>
-    <a href="laurent-pilot.vcf" class="btn-link">💾 Save Contact</a>
-    <a href="tel:+353860723258" class="btn-link">🇮🇪 +353 86 072 32 58</a>
-    <a href="tel:+33782451590" class="btn-link">🇫🇷 +33 7 82 45 15 90</a>
-    <a href="https://www.linkedin.com/in/laurentpilot/" class="btn-link"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="social" /></a>
-    <a href="https://www.facebook.com/profile.php?id=61573622889264" class="btn-link"><img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook" class="social" /></a>
-  </div>
-  <footer>Website powered by Netlify · Maintained by Laurent</footer>
-</div>
 </body>
 </html>
-<!-- ASTUCE_END -->
+EOF
