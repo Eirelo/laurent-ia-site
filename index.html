@@ -3,35 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laurent – AI Expert / Expert en IA (Corrected Clock v5)</title>
+    <title>Laurent – Expert en IA / AI Expert (Corrected Clock v8)</title>
     <style>
       body { font-family: sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; text-align: center; }
       .container { max-width: 800px; margin: 20px auto; background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-      img[alt="Laurent"] { border-radius: 60px !important; }
-      .presentation-container { margin-bottom: 20px; }
-      .presentation-container h1 {
-        font-size: 1.8em; /* Slightly larger for bilingual title */
-        margin-bottom: 10px;
+      img[alt="Laurent"] { border-radius: 60px !important; margin-bottom:10px; }
+      
+      .main-title-laurent {
+        font-size: 2.2em; /* Larger for Laurent */
+        font-weight: bold;
+        margin-bottom: 0px;
+        line-height: 1.1;
       }
-      .presentation-text, .experience-text {
+      .main-title-expert {
+        font-size: 1.5em; /* Smaller for Expert en IA / AI Expert */
+        color: #555;
+        margin-top:0px;
+        margin-bottom: 20px;
+        line-height: 1.1;
+      }
+
+      .presentation-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two equal columns */
+        gap: 20px; /* Space between columns */
+        margin-bottom: 20px;
+        text-align: left;
+      }
+      .presentation-grid .column h3 {
+          margin-top:0;
+          font-size: 1.1em;
+          color: #333;
+      }
+      .presentation-grid .column p, .presentation-grid .column ul {
         line-height: 1.6;
-        margin-bottom: 15px;
+        margin:0 0 10px 0;
+        padding-left: 0; /* Remove default ul padding */
       }
-      .lang-fr { 
-        font-style: italic; 
-        color: #444; /* Slightly different color for French text */
-        display: block; /* Ensure it_s on a new line if needed */
-        margin-top: 5px;
+      .presentation-grid .column ul li {
+          list-style-type: none; /* Remove default bullet points */
+          margin-bottom: 5px;
       }
-      .key-points {
-        text-align: left; 
-        padding-left: 20px; 
-        margin: 0 auto 20px auto; 
-        max-width: 500px; /* Adjusted for potentially longer bilingual text */
-      }
-      .key-points p {
-        margin-bottom: 8px;
-      }
+
       .tips-box {
         background-color: #e6ffe6; /* Vert clair */
         border: 1px solid #cce5cc;
@@ -82,30 +95,47 @@
       .btn-link { margin: 5px; text-decoration: none; color: #007bff; }
       .social { width: 24px; height: 24px; vertical-align: middle; }
       footer { margin-top: 30px; font-size: 0.9em; color: #777; }
+
+      /* Responsive: Stack columns on smaller screens */
+      @media (max-width: 600px) {
+        .presentation-grid {
+          grid-template-columns: 1fr; /* Single column */
+        }
+      }
     </style>
 </head>
 <body>
   <div class="container">
     <img src="laurent-pilot-bbdaa419.jpg" alt="Laurent" width="120" style="border-radius: 60px;">
-    <div class="presentation-container">
-        <h1>Laurent – AI Expert / Expert en IA</h1>
-        <p class="presentation-text">
-            I make AI accessible to everyone through conferences, workshops, and strategic support.
-            <span class="lang-fr">Je rends l_IA accessible à tous à travers des conférences, des ateliers et un accompagnement stratégique.</span>
-        </p>
-        <p class="experience-text">
-            With over 10 years of experience, I help businesses integrate AI responsibly and efficiently.
-            <span class="lang-fr">Avec plus de 10 ans d_expérience, j_aide les entreprises à intégrer l_IA de manière responsable et efficace.</span>
-        </p>
+    
+    <h1 class="main-title-laurent">Laurent</h1>
+    <h2 class="main-title-expert">Expert en IA / AI Expert</h2>
+
+    <div class="presentation-grid">
+        <div class="column fr-column">
+            <h3>Présentation</h3>
+            <p>Je rends l'IA accessible à tous à travers des conférences, des ateliers et un accompagnement stratégique.</p>
+            <p>Avec plus de 10 ans d'expérience, j'aide les entreprises à intégrer l'IA de manière responsable et efficace.</p>
+            <h3>Points Clés</h3>
+            <ul>
+                <li>✅ Sensibilisation aux risques de l'IA (biais, éthique, cybersécurité)</li>
+                <li>✅ Accompagnement à l'intégration de l'IA</li>
+                <li>✅ Ateliers pratiques et conférences pour tous les niveaux</li>
+            </ul>
+        </div>
+        <div class="column en-column">
+            <h3>Presentation</h3>
+            <p>I make AI accessible to everyone through conferences, workshops, and strategic support.</p>
+            <p>With over 10 years of experience, I help businesses integrate AI responsibly and efficiently.</p>
+            <h3>Key Points</h3>
+            <ul>
+                <li>✅ Awareness of AI risks (bias, ethics, cybersecurity)</li>
+                <li>✅ Guidance on AI integration</li>
+                <li>✅ Hands-on workshops and talks for all levels</li>
+            </ul>
+        </div>
     </div>
-    <div class="key-points">
-        <p>✅ Awareness of AI risks (bias, ethics, cybersecurity)<br>
-        <span class="lang-fr">✅ Sensibilisation aux risques de l_IA (biais, éthique, cybersécurité)</span></p>
-        <p>✅ Guidance on AI integration<br>
-        <span class="lang-fr">✅ Accompagnement à l_intégration de l_IA</span></p>
-        <p>✅ Hands-on workshops and talks for all levels<br>
-        <span class="lang-fr">✅ Ateliers pratiques et conférences pour tous les niveaux</span></p>
-    </div>
+
     <div class="tips-box">
       <div class="header-content-v4">
         <div id="realtime-clock">
@@ -120,13 +150,13 @@
       <script>
         function updateClock() {
           const now = new Date();
-          const hours = String(now.getHours()).padStart(2, '0');
-          const minutes = String(now.getMinutes()).padStart(2, '0');
-          const seconds = String(now.getSeconds()).padStart(2, '0');
-          const day = String(now.getDate()).padStart(2, '0');
-          const month = String(now.getMonth() + 1).padStart(2, '0');
+          const hours = String(now.getHours()).padStart(2, "0");
+          const minutes = String(now.getMinutes()).padStart(2, "0");
+          const seconds = String(now.getSeconds()).padStart(2, "0");
+          const day = String(now.getDate()).padStart(2, "0");
+          const month = String(now.getMonth() + 1).padStart(2, "0");
           const year = now.getFullYear();
-          const clockElement = document.getElementById('realtime-clock');
+          const clockElement = document.getElementById("realtime-clock");
           if (clockElement) {
             clockElement.innerHTML = `<strong>${hours}:${minutes}:${seconds}</strong><br><small>${day}/${month}/${year}</small>`;
           }
@@ -134,7 +164,7 @@
         setInterval(updateClock, 1000);
         updateClock();
       </script>
-      <p><strong>🇫🇷</strong> Utiliser un algorithme d_intelligence artificielle pour planifier vos repas en fonction de vos préférences alimentaires et de vos objectifs nutritionnels.</p>
+      <p><strong>🇫🇷</strong> Utiliser un algorithme d'intelligence artificielle pour planifier vos repas en fonction de vos préférences alimentaires et de vos objectifs nutritionnels.</p>
       <p><strong>🇬🇧</strong> Use an artificial intelligence algorithm to plan your meals based on your dietary preferences and nutritional goals.</p>
     </div>
     <div class="button-row">
