@@ -1,50 +1,126 @@
-cat << 'EOF' | sudo tee /mnt/data/laurent-site/index.html > /dev/null
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laurent – Expert en IA / AI Expert (Corrected Clock v8)</title>
+    <title>Laurent pour vous servir – Expert en IA / AI Expert (Corrected Clock v11)</title>
     <style>
       body { font-family: sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; text-align: center; }
       .container { max-width: 800px; margin: 20px auto; background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-      img[alt="Laurent"] { border-radius: 60px !important; margin-bottom:10px; }
-      .main-title-laurent { font-size: 2.2em; font-weight: bold; margin-bottom: 0px; line-height: 1.1; }
-      .main-title-expert { font-size: 1.5em; color: #555; margin-top:0px; margin-bottom: 20px; line-height: 1.1; }
-      .presentation-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; text-align: left; }
-      .presentation-grid .column h3 { margin-top:0; font-size: 1.1em; color: #333; }
-      .presentation-grid .column p, .presentation-grid .column ul { line-height: 1.6; margin:0 0 10px 0; padding-left: 0; }
-      .presentation-grid .column ul li { list-style-type: none; margin-bottom: 5px; }
-      .tips-box { background-color: #e6ffe6; border: 1px solid #cce5cc; padding: 15px; margin-top: 20px; border-radius: 5px; }
-      .header-content-v4 { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
-      #realtime-clock { background-color: #333; color: white; padding: 10px; border-radius: 5px; font-family: sans-serif; text-align: center; flex-shrink: 0; min-width: 65px; box-sizing: content-box; }
+      
+      .main-title-laurent {
+        font-size: 1.8em; /* Reduced font size */
+        font-weight: bold;
+        margin-top: 15px; 
+        margin-bottom: 15px; 
+        line-height: 1.1;
+      }
+      img[alt="Laurent"] { display: block; margin-left: auto; margin-right: auto; border-radius: 60px !important; margin-bottom:10px; } 
+      
+      .main-title-expert {
+        font-size: 1.5em; 
+        color: #555;
+        margin-top: 25px; /* Increased margin-top */
+        margin-bottom: 40px; /* Significantly increased margin-bottom */
+        line-height: 1.1;
+      }
+
+      .presentation-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        gap: 20px; 
+        margin-bottom: 20px;
+        text-align: left;
+      }
+      .presentation-grid .column h3 {
+          margin-top:0;
+          margin-bottom: 15px; 
+          font-size: 1.1em;
+          color: #333;
+      }
+      .presentation-grid .column p, .presentation-grid .column ul {
+        line-height: 1.6;
+        margin:0 0 10px 0;
+        padding-left: 0; 
+      }
+      .presentation-grid .column ul li {
+          list-style-type: none; 
+          margin-bottom: 5px;
+      }
+
+      .tips-box {
+        background-color: #e6ffe6; 
+        border: 1px solid #cce5cc;
+        padding: 15px;
+        margin-top: 20px;
+        border-radius: 5px;
+      }
+      .header-content-v4 {
+        display: flex;
+        align-items: center; 
+        gap: 15px; 
+        margin-bottom: 15px;
+      }
+      #realtime-clock {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        font-family: sans-serif;
+        text-align: center;
+        flex-shrink: 0; 
+        min-width: 65px; 
+        box-sizing: content-box; 
+      }
       #realtime-clock strong { font-size: 1.2em; }
       #realtime-clock small { font-size: 0.9em; }
-      .titles-block-v4 { flex-grow: 1; text-align: center; }
-      .titles-block-v4 h2 { margin: 0; font-size: 1.5em; }
-      .clock-spacer-v4 { min-width: 65px; padding: 10px; box-sizing: content-box; visibility: hidden; flex-shrink: 0; }
+      .titles-block-v4 {
+        flex-grow: 1; 
+        text-align: center; 
+      }
+      .titles-block-v4 h2, .titles-block-v4 h3 {
+        margin: 0;
+      }
+      .titles-block-v4 h2 { 
+          font-size: 1.3em; /* Adjusted size for the new single title */
+          font-weight: bold;
+      }
+      /* Removed .titles-block-v4 h3 as it_s no longer used */
+      .clock-spacer-v4 {
+        min-width: 65px; 
+        padding: 10px; 
+        box-sizing: content-box;
+        visibility: hidden; 
+        flex-shrink: 0;
+      }
       .button-row { margin-top: 20px; }
       .btn-link { margin: 5px; text-decoration: none; color: #007bff; }
       .social { width: 24px; height: 24px; vertical-align: middle; }
       footer { margin-top: 30px; font-size: 0.9em; color: #777; }
-      @media (max-width: 600px) { .presentation-grid { grid-template-columns: 1fr; } }
+
+      @media (max-width: 600px) {
+        .presentation-grid {
+          grid-template-columns: 1fr; 
+        }
+      }
     </style>
 </head>
 <body>
   <div class="container">
+    <h1 class="main-title-laurent">Laurent pour vous servir</h1>
     <img src="laurent-pilot-bbdaa419.jpg" alt="Laurent" width="120">
-    <h1 class="main-title-laurent">Laurent</h1>
+    
     <h2 class="main-title-expert">Expert en IA / AI Expert</h2>
 
     <div class="presentation-grid">
         <div class="column fr-column">
             <h3>Présentation</h3>
-            <p>Je rends l'IA accessible à tous à travers des conférences, des ateliers et un accompagnement stratégique.</p>
-            <p>Avec plus de 10 ans d'expérience, j'aide les entreprises à intégrer l'IA de manière responsable et efficace.</p>
+            <p>Je rends l_IA accessible à tous à travers des conférences, des ateliers et un accompagnement stratégique.</p>
+            <p>Avec plus de 10 ans d_expérience, j_aide les entreprises à intégrer l_IA de manière responsable et efficace.</p>
             <h3>Points Clés</h3>
             <ul>
-                <li>✅ Sensibilisation aux risques de l'IA (biais, éthique, cybersécurité)</li>
-                <li>✅ Accompagnement à l'intégration de l'IA</li>
+                <li>✅ Sensibilisation aux risques de l_IA (biais, éthique, cybersécurité)</li>
+                <li>✅ Accompagnement à l_intégration de l_IA</li>
                 <li>✅ Ateliers pratiques et conférences pour tous les niveaux</li>
             </ul>
         </div>
@@ -63,11 +139,14 @@ cat << 'EOF' | sudo tee /mnt/data/laurent-site/index.html > /dev/null
 
     <div class="tips-box">
       <div class="header-content-v4">
-        <div id="realtime-clock"></div>
+        <div id="realtime-clock">
+          <!-- L_horloge sera mise à jour par JavaScript -->
+        </div>
         <div class="titles-block-v4">
           <h2>💡 IA du jour / AI Tip of the Day</h2>
+          <!-- Ancien h3 supprimé -->
         </div>
-        <div class="clock-spacer-v4"></div>
+        <div class="clock-spacer-v4"></div> <!-- Espaceur invisible pour équilibrer -->
       </div>
       <script>
         function updateClock() {
@@ -86,10 +165,9 @@ cat << 'EOF' | sudo tee /mnt/data/laurent-site/index.html > /dev/null
         setInterval(updateClock, 1000);
         updateClock();
       </script>
-      <p><strong>🇫🇷</strong> Utiliser un algorithme d'intelligence artificielle pour planifier vos repas en fonction de vos préférences alimentaires et de vos objectifs nutritionnels.</p>
+      <p><strong>🇫🇷</strong> Utiliser un algorithme d_intelligence artificielle pour planifier vos repas en fonction de vos préférences alimentaires et de vos objectifs nutritionnels.</p>
       <p><strong>🇬🇧</strong> Use an artificial intelligence algorithm to plan your meals based on your dietary preferences and nutritional goals.</p>
     </div>
-
     <div class="button-row">
       <a href="mailto:laurent@iapourtous.pro" class="btn-link">✉️ Email</a>
       <a href="laurent-pilot.vcf" class="btn-link">💾 Save Contact</a>
@@ -98,11 +176,7 @@ cat << 'EOF' | sudo tee /mnt/data/laurent-site/index.html > /dev/null
       <a href="https://www.linkedin.com/in/laurentpilot/" class="btn-link"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="social"></a>
       <a href="https://www.facebook.com/profile.php?id=61573622889264" class="btn-link"><img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook" class="social"></a>
     </div>
-
     <footer>Website powered by Netlify · Maintained by Laurent</footer>
   </div>
 </body>
 </html>
-EOF
-
-    
