@@ -4,43 +4,62 @@ cat > index.html <<'EOF'
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laurent – AI Expert (Corrected Clock)</title>
+    <title>Laurent – AI Expert (Corrected Clock v4)</title>
     <style>
       body { font-family: sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; text-align: center; }
       .container { max-width: 800px; margin: 20px auto; background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
       img[alt="Laurent"] { border-radius: 60px !important; }
       .presentation { line-height: 1.6; }
       .tips-box {
-        background-color: #e6ffe6; /* Vert clair pour la boîte d'astuces */
+        background-color: #e6ffe6; /* Vert clair */
         border: 1px solid #cce5cc;
         padding: 15px;
         margin-top: 20px;
         border-radius: 5px;
-        text-align: left;
-        position: relative; /* Contexte de positionnement pour l'horloge */
-        padding-top: 70px; /* Espace pour l'horloge en haut */
       }
-      .tips-box h2, .tips-box h3 { text-align: center; }
+      .header-content-v4 {
+        display: flex;
+        align-items: center; /* Aligner verticalement */
+        gap: 15px; /* Espace entre les éléments flex */
+        margin-bottom: 15px;
+      }
+      #realtime-clock {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        font-family: sans-serif;
+        text-align: center;
+        flex-shrink: 0; /* Empêcher l_horloge de rétrécir */
+        min-width: 65px; /* Largeur minimale pour le contenu de l_horloge */
+        box-sizing: content-box; /* padding s_ajoute à min-width */
+      }
+      #realtime-clock strong { font-size: 1.2em; }
+      #realtime-clock small { font-size: 0.9em; }
+      .titles-block-v4 {
+        flex-grow: 1; /* Prend l_espace central restant */
+        text-align: center; /* Centre le texte (h2, h3) à l_intérieur */
+      }
+      .titles-block-v4 h2, .titles-block-v4 h3 {
+        margin: 0;
+      }
+      .titles-block-v4 h2 { font-size: 1.5em; }
+      .titles-block-v4 h3 {
+        font-size: 1.1em;
+        color: #555;
+        margin-top: 4px;
+      }
+      .clock-spacer-v4 {
+        min-width: 65px; /* Doit correspondre à min-width de #realtime-clock */
+        padding: 10px; /* Doit correspondre au padding de #realtime-clock pour équilibrer la largeur totale */
+        box-sizing: content-box;
+        visibility: hidden; /* Rend l_espaceur invisible mais occupant de l_espace */
+        flex-shrink: 0;
+      }
       .button-row { margin-top: 20px; }
       .btn-link { margin: 5px; text-decoration: none; color: #007bff; }
       .social { width: 24px; height: 24px; vertical-align: middle; }
       footer { margin-top: 30px; font-size: 0.9em; color: #777; }
-
-      /* Styles pour l'horloge */
-      #realtime-clock {
-        position: absolute;
-        top: 10px; /* Position en haut à gauche dans .tips-box */
-        left: 10px;
-        background-color: #333; /* Fond sombre original */
-        color: white; /* Texte blanc original */
-        padding: 10px;
-        border-radius: 5px;
-        font-family: sans-serif;
-        z-index: 10; /* Au-dessus du contenu de .tips-box */
-        text-align: left; /* Alignement du texte de l'horloge */
-      }
-      #realtime-clock strong { font-size: 1.2em; }
-      #realtime-clock small { font-size: 0.9em; }
     </style>
 </head>
 <body>
@@ -54,8 +73,15 @@ cat > index.html <<'EOF'
       ✅ Hands-on workshops and talks for all levels
     </div>
     <div class="tips-box">
-      <div id="realtime-clock">
-        <!-- L'horloge sera mise à jour par JavaScript -->
+      <div class="header-content-v4">
+        <div id="realtime-clock">
+          <!-- L_horloge sera mise à jour par JavaScript -->
+        </div>
+        <div class="titles-block-v4">
+          <h2>💡 Astuce IA</h2>
+          <h3>IA du jour / AI Tip of the Day</h3>
+        </div>
+        <div class="clock-spacer-v4"></div> <!-- Espaceur invisible pour équilibrer -->
       </div>
       <script>
         function updateClock() {
@@ -64,23 +90,17 @@ cat > index.html <<'EOF'
           const minutes = String(now.getMinutes()).padStart(2, '0');
           const seconds = String(now.getSeconds()).padStart(2, '0');
           const day = String(now.getDate()).padStart(2, '0');
-          const month = String(now.getMonth() + 1).padStart(2, '0'); // Les mois sont de 0 à 11
+          const month = String(now.getMonth() + 1).padStart(2, '0');
           const year = now.getFullYear();
           const clockElement = document.getElementById('realtime-clock');
           if (clockElement) {
             clockElement.innerHTML = `<strong>${hours}:${minutes}:${seconds}</strong><br><small>${day}/${month}/${year}</small>`;
           }
         }
-        // Mettre à jour l'horloge toutes les secondes et immédiatement au chargement
         setInterval(updateClock, 1000);
         updateClock();
       </script>
-      <!-- Contenu original de la tips-box -->
-      <div style="text-align: center;">
-        <h2>💡 Astuce IA</h2>
-        <h3>IA du jour / AI Tip of the Day</h3>
-      </div>
-      <p><strong>🇫🇷</strong> Utiliser un algorithme d'intelligence artificielle pour planifier vos repas en fonction de vos préférences alimentaires et de vos objectifs nutritionnels.</p>
+      <p><strong>🇫🇷</strong> Utiliser un algorithme d_intelligence artificielle pour planifier vos repas en fonction de vos préférences alimentaires et de vos objectifs nutritionnels.</p>
       <p><strong>🇬🇧</strong> Use an artificial intelligence algorithm to plan your meals based on your dietary preferences and nutritional goals.</p>
     </div>
     <div class="button-row">
