@@ -155,19 +155,16 @@
     </div>
 
     <div class="tips-box">
-    <div class="astuce-container" style="background-color: #e6ffe6; border: 1px solid #cce5cc; padding: 10px; margin: 20px 0; border-radius: 5px;">
-          <h2>💡 IA du jour / AI Tip of the Day</h2>
-        <p><strong>🇫🇷:</strong> Les assistants IA personnalisés peuvent vous aider à structurer votre journée en fonction de vos priorités.</p>
-        <p><strong>🇬🇧:</strong> Personalized AI assistants can help structure your day based on your priorities.</p>
-        <div class="clock-spacer-v4"></div>
+      <div class="header-content-v4">
         <div id="realtime-clock">
           <!-- L'horloge sera mise à jour par JavaScript -->
         </div>
         <div class="titles-block-v4">
           <h2>💡 IA du jour / AI Tip of the Day</h2>
-        <p><strong>🇫🇷:</strong> Les assistants IA personnalisés peuvent vous aider à structurer votre journée en fonction de vos priorités.</p>
-        <p><strong>🇬🇧:</strong> Personalized AI assistants can help structure your day based on your priorities.</p>
-        <div class="clock-spacer-v4"></div>
+        </div>
+        <div class="clock-spacer-v4"></div> <!-- Espaceur invisible pour équilibrer -->
+      </div>
+      <script>
         function updateClock() {
           const now = new Date();
           const hours = String(now.getHours()).padStart(2, "0");
