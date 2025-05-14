@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laurent – Expert en IA    /    AI Expert (Corrected Clock v11)</title>
+    <title>Laurent pour vous servir – Expert en IA / AI Expert (Corrected Clock v13)</title>
     <style>
       body { font-family: sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; text-align: center; }
       .container { max-width: 800px; margin: 20px auto; background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
@@ -15,14 +15,22 @@
         margin-bottom: 15px; 
         line-height: 1.1;
       }
-      img[alt="Laurent"] { display: block; margin-left: auto; margin-right: auto; border-radius: 60px !important; margin-bottom:10px; } 
+      img[alt="Laurent"] { display: block; margin-left: auto; margin-right: auto; border-radius: 60px !important; margin-bottom:20px; } /* Increased margin-bottom after image */
       
-      .main-title-expert {
-        font-size: 1.5em; 
+      /* Removed .main-title-expert as it_s replaced by .subtitles-container */
+      .subtitles-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px; /* Gap between the two new subtitles */
+        margin-bottom: 30px; /* Space before the presentation grid */
+        padding: 0 10px; /* Add some padding so subtitles don_t touch edges if columns are narrow */
+      }
+      .subtitle-column-specific {
+        font-size: 1.3em; /* Font size for new subtitles */
         color: #555;
-        margin-top: 25px; /* Increased margin-top */
-        margin-bottom: 40px; /* Significantly increased margin-bottom */
-        line-height: 1.1;
+        font-weight: bold;
+        text-align: center;
+        margin:0;
       }
 
       .presentation-grid {
@@ -34,9 +42,17 @@
       }
       .presentation-grid .column h3 {
           margin-top:0;
-          margin-bottom: 15px; 
+          margin-bottom: 10px; 
           font-size: 1.1em;
           color: #333;
+      }
+      .presentation-grid .column h4 {
+          font-size: 1.0em;
+          font-weight: bold;
+          color: #333;
+          margin-top: 20px; 
+          margin-bottom: 10px; 
+          text-align: center;
       }
       .presentation-grid .column p, .presentation-grid .column ul {
         line-height: 1.6;
@@ -78,14 +94,11 @@
         flex-grow: 1; 
         text-align: center; 
       }
-      .titles-block-v4 h2, .titles-block-v4 h3 {
-        margin: 0;
-      }
-      .titles-block-v4 h2 { 
-          font-size: 1.3em; /* Adjusted size for the new single title */
+      .titles-block-v4 h2 {
+          font-size: 1.3em; 
           font-weight: bold;
+          margin:0;
       }
-      /* Removed .titles-block-v4 h3 as it_s no longer used */
       .clock-spacer-v4 {
         min-width: 65px; 
         padding: 10px; 
@@ -99,8 +112,15 @@
       footer { margin-top: 30px; font-size: 0.9em; color: #777; }
 
       @media (max-width: 600px) {
-        .presentation-grid {
-          grid-template-columns: 1fr; 
+        .presentation-grid, .subtitles-container {
+          grid-template-columns: 1fr; /* Stack columns and subtitles on smaller screens */
+        }
+        .subtitles-container {
+            gap: 10px; /* Reduce gap when stacked */
+            margin-bottom: 20px;
+        }
+        .subtitle-column-specific {
+            font-size: 1.2em;
         }
       }
     </style>
@@ -110,13 +130,17 @@
     <h1 class="main-title-laurent">Laurent pour vous servir</h1>
     <img src="laurent-pilot-bbdaa419.jpg" alt="Laurent" width="120">
     
-    <h2 class="main-title-expert">Expert en IA / AI Expert</h2>
+    <div class="subtitles-container">
+        <h2 class="subtitle-column-specific">Expert en IA</h2>
+        <h2 class="subtitle-column-specific">AI Expert</h2>
+    </div>
 
     <div class="presentation-grid">
         <div class="column fr-column">
             <h3>Présentation</h3>
             <p>Je rends l_IA accessible à tous à travers des conférences, des ateliers et un accompagnement stratégique.</p>
             <p>Avec plus de 10 ans d_expérience, j_aide les entreprises à intégrer l_IA de manière responsable et efficace.</p>
+            <h4>Expert en IA</h4> 
             <h3>Points Clés</h3>
             <ul>
                 <li>✅ Sensibilisation aux risques de l_IA (biais, éthique, cybersécurité)</li>
@@ -128,6 +152,7 @@
             <h3>Presentation</h3>
             <p>I make AI accessible to everyone through conferences, workshops, and strategic support.</p>
             <p>With over 10 years of experience, I help businesses integrate AI responsibly and efficiently.</p>
+            <h4>AI Expert</h4>
             <h3>Key Points</h3>
             <ul>
                 <li>✅ Awareness of AI risks (bias, ethics, cybersecurity)</li>
@@ -144,7 +169,6 @@
         </div>
         <div class="titles-block-v4">
           <h2>💡 IA du jour / AI Tip of the Day</h2>
-          <!-- Ancien h3 supprimé -->
         </div>
         <div class="clock-spacer-v4"></div> <!-- Espaceur invisible pour équilibrer -->
       </div>
