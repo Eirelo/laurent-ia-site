@@ -138,7 +138,6 @@
         <h1>Laurent à votre service / here to help</h1>
         
         <div class="profile">
-            <!-- Utilisation de l'image du dépôt GitHub -->
             <img src="laurent-pilot-bbdaa419.jpg" alt="Laurent">
         </div>
         
@@ -186,8 +185,16 @@
                 <a href="https://laurent-ia.com/vcard">💾 Save Contact</a>
                 <a href="tel:+353860723258">🇮🇪 +353 86 072 32 58</a>
                 <a href="tel:+33782451590">🇫🇷 +33 7 82 45 15 90</a>
-                <a href="https://linkedin.com/in/laurentai"><img src="https://i.ibb.co/LrVMXNR/linkedin-icon.png" alt="LinkedIn"></a>
-                <a href="https://facebook.com/laurentai"><img src="https://i.ibb.co/HxXSY0z/facebook-icon.png" alt="Facebook"></a>
+                <a href="https://linkedin.com/in/laurentai">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#0077B5">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                </a>
+                <a href="https://facebook.com/laurentai">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#1877F2">
+                        <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+                    </svg>
+                </a>
             </div>
             
             <div class="footer">
@@ -197,30 +204,32 @@
     </div>
 
     <script>
+        // Format original de l'horloge
         function updateClock( ) {
             const now = new Date();
             const hours = String(now.getHours()).padStart(2, "0");
             const minutes = String(now.getMinutes()).padStart(2, "0");
             const seconds = String(now.getSeconds()).padStart(2, "0");
+            
+            // Format simple HH:MM:SS
+            document.getElementById("realtime-clock").textContent = hours + ":" + minutes + ":" + seconds;
+            
+            // Ajouter la date en dessous dans un petit format
             const day = String(now.getDate()).padStart(2, "0");
             const month = String(now.getMonth() + 1).padStart(2, "0");
             const year = now.getFullYear();
             
-            document.getElementById("realtime-clock").textContent = `${hours}:${minutes}:${seconds}`;
-            
-            // Ajouter la date sous l'horloge
-            const dateElement = document.createElement("div");
-            dateElement.style.fontSize = "12px";
-            dateElement.textContent = `${day}/${month}/${year}`;
-            
-            const clockElement = document.getElementById("realtime-clock");
-            // Supprimer l'ancienne date si elle existe
-            if (clockElement.nextElementSibling && clockElement.nextElementSibling.tagName === "DIV") {
-                clockElement.parentNode.removeChild(clockElement.nextElementSibling);
+            // Vérifier si l'élément de date existe déjà
+            let dateElement = document.querySelector("#realtime-clock + small");
+            if (!dateElement) {
+                dateElement = document.createElement("small");
+                dateElement.style.display = "block";
+                dateElement.style.fontSize = "12px";
+                dateElement.style.marginTop = "2px";
+                document.getElementById("realtime-clock").parentNode.appendChild(dateElement);
             }
             
-            // Ajouter la nouvelle date
-            clockElement.parentNode.insertBefore(dateElement, clockElement.nextSibling);
+            dateElement.textContent = day + "/" + month + "/" + year;
         }
         
         // Mettre à jour l'horloge immédiatement et toutes les secondes
